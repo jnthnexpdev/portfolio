@@ -1,0 +1,64 @@
+<section class="contact reveal w-full bg-white flex items-center justify-start flex-col py-10 px-5">
+    <h3 class="bg-linear-to-r from-(--sky) via-(--persian) to-(--sky) bg-clip-text text-transparent fs-h1 font-semibold mb-10 w-full text-center leading-8"> {{ 'contact.title' | translate }} </h3>
+    
+    <p class="fs-base mb-8 w-full sm:w-[450px]"> {{'contact.description' | translate}} </p>
+
+
+    <form class="w-full flex justify-center items-center flex-col rounded-2xl p-4 shadow-md sm:w-[450px]"   action="https://api.web3forms.com/submit" method="POST">
+
+        <input type="hidden" name="access_key" value="24d8c444-08e1-41e2-852b-f12c8f47d296">
+
+        <div class="label w-full flex items-center mb-4">
+            <svg class="w-5 h-5 fill-none mr-1 stroke-(--blue)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3a4 4 0 1 0 0 8 4 4 0 1 0 0-8z"></path>
+                <path d="M4 21v-4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"></path>
+            </svg>
+            <label class="fs-base font-semibold" for=""> {{'contact.form.name' | translate}} </label>
+        </div>
+
+        <input type="text" class="w-full fs-base text-center font-medium p-2 outline-0 border-b-2 mb-4" name="fullname" required [placeholder]="'contact.form.namePlaceholder' | translate">
+
+        <div class="label w-full flex items-center mb-4">
+            <svg class="w-5 h-5 fill-none mr-1 stroke-(--blue)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <rect width="18" height="14" x="3" y="5" rx="1"></rect>
+                <path d="M20 5.5 12 13 4 5.5"></path>
+            </svg>
+            <label class="fs-base font-semibold" for=""> {{'contact.form.email' | translate}} </label>
+        </div>
+
+        <input type="email" class="w-full fs-base text-center font-medium p-2 outline-0 border-b-2  mb-4" name="email" required [placeholder]="'contact.form.emailPlaceholder' | translate">
+
+        <div class="label w-full flex items-center mb-4">
+            <svg class="w-5 h-5 fill-none mr-1 stroke-(--blue)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 7h8"></path>
+                <path d="M7 11h4"></path>
+                <path d="M19 3H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3l3.646 3.646a.5.5 0 0 0 .708 0L16 17h3a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"></path>
+            </svg>
+            <label class="fs-base font-semibold" for=""> {{'contact.form.message' | translate}} </label>
+        </div>
+
+        <textarea name="message" required rows="4" class="w-full resize-y fs-base text-center font-medium p-2 outline-0 border-b-2  mb-4" placeholder="{{ 'contact.form.messagePlaceholder' | translate }}"></textarea>
+
+        <button class="w-full mb-4 flex items-center justify-center bg-(--blue) p-2 rounded-lg hover:cursor-pointer hover:scale-101">
+            <svg 
+            class="w-5 h-5 fill-none stroke-white mr-1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 2 2 8.667l9.583 3.75M22 2l-6.667 20-3.75-9.583M22 2 11.583 12.417"></path>
+            </svg>
+            <p class="fs-base text-white">
+                {{ 'contact.form.submit' | translate }} 
+            </p>
+        </button>
+
+        <a href="https://wa.me/527352236351" target="_blank" class="w-full flex items-center justify-center bg-(--white) p-2 rounded-lg hover:cursor-pointer hover:scale-101">
+            <svg class="w-5 h-5 fill-none mr-1 stroke-(--whatsapp)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="m3 20.999 1.65-3.8a9 9 0 1 1 3.4 2.9l-5.05.9"></path>
+            <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 1 0-1 0v1Zm0 0a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"></path>
+            </svg>
+            <p class="fs-base text-(--black)">
+                {{'contact.whatsapp' | translate}}
+            </p>
+        </a>
+
+    </form>
+
+</section>

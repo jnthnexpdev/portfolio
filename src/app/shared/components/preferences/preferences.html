@@ -1,0 +1,92 @@
+<section class="p-5 flex items-start flex-col">
+    <h2 mat-dialog-title class="fs-h3 font-semibold text-center text-(--red) mb-5"> Preferencias </h2>
+    
+    <label class="fs-base font-semibold mb-4"> Tema: </label>
+
+    <div class="theme w-full mb-5 border rounded-xl">
+        <button class="p-2 w-full flex items-center outline-none hover:cursor-pointer" [ngClass]="openThemeSelect() ? 'border-b' : 'border-none'" (click)="toggleSelectTheme()">
+            @if(themeSelected.value === 'light'){
+                <svg class="w-5 h-6 mr-2 fill-amber-400 stroke-amber-400" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5 17.5 19 19m1-7h2M6.5 6.5 5 5m12.5 1.5L19 5M6.5 17.5 5 19m-3-7h2m8-10v2m0 16v2m4-10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"></path>
+                </svg>
+            }@else{
+                <svg class="w-5 h-6 mr-2 fill-sky-200 stroke-sky-200" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.381 2.043H9.38h.001Zm0 0c-.462 1.725-.305 3.499.157 5.224a10.17 10.17 0 0 0 2.635 4.56 10.168 10.168 0 0 0 4.56 2.635c1.725.462 3.509.589 5.234.126a10.126 10.126 0 0 1-2.6 4.432c-3.973 3.973-10.414 3.973-14.387 0-3.972-3.972-3.972-10.413 0-14.386a10.127 10.127 0 0 1 4.401-2.591Z"></path>
+                </svg>
+            }
+
+            <p class="fs-sm font-normal"> Tema {{themeSelected.label}} </p>
+
+            <svg class="w-5 h-5 fill-none stroke-(--black) absolute right-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="m4 8 8 8 8-8"></path>
+            </svg>
+
+        </button>
+
+        @if(openThemeSelect()){
+            <ul>
+                <li class="flex p-2 hover:cursor-pointer bg-gray-100" (click)="selectTheme(0)">
+                    <svg class="w-5 h-6 mr-2 fill-amber-400 stroke-amber-400" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.5 17.5 19 19m1-7h2M6.5 6.5 5 5m12.5 1.5L19 5M6.5 17.5 5 19m-3-7h2m8-10v2m0 16v2m4-10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"></path>
+                    </svg>
+                    <a class="fs-sm "> Tema claro </a>
+                </li>
+                <li class="flex p-2 hover:cursor-pointer" (click)="selectTheme(1)">
+                    <svg class="w-5 h-6 mr-2 fill-sky-200 stroke-sky-200" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.381 2.043H9.38h.001Zm0 0c-.462 1.725-.305 3.499.157 5.224a10.17 10.17 0 0 0 2.635 4.56 10.168 10.168 0 0 0 4.56 2.635c1.725.462 3.509.589 5.234.126a10.126 10.126 0 0 1-2.6 4.432c-3.973 3.973-10.414 3.973-14.387 0-3.972-3.972-3.972-10.413 0-14.386a10.127 10.127 0 0 1 4.401-2.591Z"></path>
+                    </svg>
+                    <a class="fs-sm "> Tema oscuro </a>
+                </li>   
+            </ul>
+        }
+    </div>
+
+    <!-- <ul class="w-full mb-4 border rounded-lg border-gray-400">
+        <li class="flex items-center px-2 py-2">
+            <svg class="w-5 h-6 mr-2 fill-amber-400 stroke-amber-400" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5 17.5 19 19m1-7h2M6.5 6.5 5 5m12.5 1.5L19 5M6.5 17.5 5 19m-3-7h2m8-10v2m0 16v2m4-10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"></path>
+            </svg>
+            <p class="fs-base font-normal"> Tema claro </p>
+        </li>
+        <li class="flex items-center px-2 py-2">
+            <svg class="w-5 h-6 mr-2 fill-sky-200 stroke-sky-200" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.381 2.043H9.38h.001Zm0 0c-.462 1.725-.305 3.499.157 5.224a10.17 10.17 0 0 0 2.635 4.56 10.168 10.168 0 0 0 4.56 2.635c1.725.462 3.509.589 5.234.126a10.126 10.126 0 0 1-2.6 4.432c-3.973 3.973-10.414 3.973-14.387 0-3.972-3.972-3.972-10.413 0-14.386a10.127 10.127 0 0 1 4.401-2.591Z"></path>
+            </svg>
+            <p class="fs-base font-normal"> Tema oscuro </p>
+        </li>
+    </ul> -->
+
+    <label class="fs-base font-semibold mb-5"> Idioma: </label>
+
+    <div class="language w-full mb-5 border rounded-xl">
+        <button class="p-2 w-full flex items-center outline-none hover:cursor-pointer" [ngClass]="openLanguageSelect() ? 'border-b' : 'border-none'" (click)="toggleSelectLanguage()">
+            <img [src]="languageSelected().flag" class="w-5 h-5 mr-2">
+
+            <p class="fs-sm font-normal"> {{languageSelected().label}} </p>
+
+            <svg class="w-5 h-5 fill-none stroke-(--black) absolute right-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="m4 8 8 8 8-8"></path>
+            </svg>
+
+        </button>
+
+            @if(openLanguageSelect()){
+                <ul>
+                    <li class="flex p-2 hover:cursor-pointer bg-gray-100" (click)="selectLanguage(0)">
+                        <img [src]="languages[0].flag" class="w-5 h-5 mr-2">
+                        <a class="fs-sm "> Ingles </a>
+                    </li>
+                    <li class="flex p-2 hover:cursor-pointer" (click)="selectLanguage(1)">
+                        <img [src]="languages[1].flag" class="w-5 h-5 mr-2">
+                        <a class="fs-sm "> Español </a>
+                    </li>   
+                </ul>
+            }
+    </div>
+
+    <div class="bottons w-full flex items-center justify-around">
+        <button (click)="closeDialog()" class="fs-base px-4 py-2 rounded-xl bg-transparent border border-(--red) text-(--red) hover:cursor-pointer"> Cerrar </button>
+        <button (click)="closeDialog()" class="fs-base px-4 py-2 rounded-xl text-white bg-(--red) hover:cursor-pointer"> Guardar </button>
+    </div>
+
+</section>

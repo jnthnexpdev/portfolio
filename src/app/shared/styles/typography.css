@@ -1,0 +1,17 @@
+.fs-xs   { font-size: 0.9rem; }     /* 14.4px */
+.fs-sm   { font-size: 1rem; }       /* 16px */
+.fs-base { font-size: 1.125rem; }   /* 18px */
+.fs-h4   { font-size: 1.32rem; }    /* 21.1px */
+.fs-h3   { font-size: 1.55rem; }    /* 24.8px */
+.fs-h2   { font-size: 1.85rem; }    /* 29.6px */
+.fs-h1   { font-size: 2.2rem; }     /* 35.2px */
+
+@media (min-width: 100px) and (max-width: 768px) {
+  .fs-xs   { font-size: 0.82rem; }   /* 13.1px */
+  .fs-sm   { font-size: 0.92rem; }   /* 14.7px */
+  .fs-base { font-size: 1rem; }      /* 16px */
+  .fs-h4   { font-size: 1.15rem; }   /* 18.4px */
+  .fs-h3   { font-size: 1.35rem; }   /* 21.6px */
+  .fs-h2   { font-size: 1.6rem; }    /* 25.6px */
+  .fs-h1   { font-size: 1.95rem; }   /* 31.2px */
+}

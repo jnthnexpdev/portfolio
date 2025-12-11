@@ -1,0 +1,40 @@
+<div class="hero reveal mt-20 p-5 w-full flex items-center in-view">
+    <section class="w-full min-h-[80dvh] flex items-center justify-start flex-col md:flex-row md:justify-center lg:justify-baseline ">
+
+        <div class="mb-6 p-4 w-full flex justify-center sm:w-[500px] lg:w-1/2 xl:w-2/5">
+            <img class="animate-float drop-shadow-xl" src="/pictures/profile1.png">
+        </div>
+
+        <div class="info w-full sm:w-[500px] md:p-4 lg:w-1/2 xl:w-min-[400px] xl:w-2/5">
+            <h2 class="fs-h1 font-bold mb-4 leading-8 md:mb-6 text-left"> ¡{{'hero.title' | translate}}
+                <span class="bg-linear-to-r from-(--ocean) via-(--blue) to-(--ocean) bg-clip-text text-transparent text-left"> {{'hero.name' | translate}}</span>!   
+            </h2>
+
+            <span class="fs-h3 inline-flex font-semibold mb-4 text-left"> {{'hero.job' | translate}}</span>
+
+            <p class="fs-base text-left leading-6 mb-4 md:mb-6" [innerHTML]="'hero.description' | translate">
+                
+            </p>
+
+            <div class="buttons w-full flex flex-col lg:flex-row">
+                <button (click)="downloadCV()" class="secondary flex items-center justify-center py-3 px-5 rounded-xl bg-transparent text-(--blue) border border-(--blue) hover:cursor-pointer hover:scale-101 ease-in-out">
+                    <svg class="w-5 h-5 mr-2 stroke-(--blue) fill-none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 14v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6"></path>
+                        <path d="M12 3v14m0 0-5-5.444M12 17l5-5.444"></path>
+                    </svg>
+                    <p class="font-normal fs-base"> {{ 'hero.buttons.download' | translate}} </p>
+                </button>
+
+                <button (click)="scrollTo('projects')" class="primary flex items-center justify-center py-3 px-5 rounded-xl my-4 bg-(--blue) text-white hover:cursor-pointer hover:scale-101 ease-in-out lg:mx-4 lg:my-0">
+                    <svg class="w-5 h-5 mr-2 fill-none stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 12s4-8 11-8 11 8 11 8"></path>
+                        <path d="M1 12s4 8 11 8 11-8 11-8"></path>
+                        <path d="M12 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
+                    </svg>
+                    <p class="font-normal fs-base"> {{ 'hero.buttons.cta' | translate}} </p>
+                </button>
+            </div>
+        </div>
+
+    </section>
+</div>

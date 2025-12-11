@@ -1,0 +1,260 @@
+{
+    "header" : {
+        "home" : "Home",
+        "projects" : "Projects",
+        "skills" : "Skills",
+        "about" : "About me",
+        "contact" : "Contact",
+        "preferences" : "Preferences",
+        "cv" : "CV",
+        "download" : "Download CV"
+    },
+    "hero" : {
+        "title" : "Hi, I'm",
+        "name" : "Jonathan Espinosa Garcia",
+        "job" : "Full Stack Web Developer",
+        "description" : "Computer Systems Engineer with <strong>1 year of experience</strong> building web applications. I work with a modern tech stack that includes <strong>Angular, Node.js, Express, MongoDB, and PostgreSQL</strong>, and I also have experience building websites with <strong>WordPress</strong>. My focus is on creating complete, scalable systems with an emphasis on <strong>UX/UI, responsive design, and clean code best practices</strong>.",
+        "buttons" : {
+            "download" : "Download CV",
+            "cta" : "View projects"
+        }
+    },
+    "footer" : {
+        "job" : "Full Stack Web Developer",
+        "links" : {
+            "title" : "Links",
+            "home" : "Home",
+            "projects" : "Projects",
+            "skills" : "Skills",
+            "about" : "About me",
+            "contact" : "Contact"
+        },
+        "files" : {
+            "title" : "Files",
+            "download" :"Download CV"
+        },
+        "contact" : {
+            "title" : "Contact",
+            "email" : "jnthnexpdev@gmail.com",
+            "phone" : "7352236351",
+            "location" : "Morelos"
+        },
+        "copyright" : "All rights reserved"
+    },
+    "projects": {
+        "title" : "Professional experience",
+        "projectList" : [
+            {
+                "id": 1,
+                "title": "Vehicle Fleet Management System for CFE",
+                "date": "October 2023 – January 2024",
+                "stack": [
+                    "Angular",
+                    "Node.js",
+                    "Express",
+                    "MongoDB",
+                    "JWT",
+                    "API",
+                    "CSV",
+                    "CSS"
+                ],
+                "shortDescription": "Development of an integrated platform to manage the CFE's <strong>vehicle fleet</strong>, enabling visualization of <strong>vehicle statuses</strong>, reporting <strong>faults</strong>, coordinating repairs with mechanical workshops, and maintaining a fully documented <strong>service history</strong>.",
+                "fullDescription": "I developed a comprehensive <strong>vehicle fleet management system</strong> for the Federal Electricity Commission (CFE) to centralize all information related to vehicles across different departments. Area supervisors could view tables showing each vehicle’s <strong>status</strong> (operational, in workshop, or broken), along with key details such as <strong>license plates, model, year, vehicle type</strong>, and the assigned driver or responsible person. When a vehicle malfunctioned, coordinators created detailed reports with <strong>descriptions and photos</strong>, which mechanical workshops reviewed to propose diagnostics, estimated repair times, and a <strong>preliminary budget</strong>. Once approved, the vehicle was assigned to a workshop, where technicians documented each step through a <strong>timeline with images and progress updates</strong>. The platform also generated <strong>delivery receipts</strong> once the vehicle was fully repaired and validated by CFE. All initial vehicle information was imported via <strong>CSV files</strong>, and every repair record was stored in organized folders to maintain a complete <strong>historical archive of each vehicle</strong>.",
+                "folder" : "cfe",
+                "imgs" : [ "img1", "img2", "img3", "img4", "img5", "img6" ],
+                "repositories": {
+                    "frontend": {
+                        "available": "true",
+                        "url": "https://gitlab.com/jnthnexpdev/cfe_frontend",
+                        "platform": "GitLab"
+                    },
+                    "backend": {
+                        "available": "true",
+                        "url": "https://gitlab.com/jnthnexpdev/cfe_backend",
+                        "platform": "GitLab"
+                    }
+                }
+            },
+            {
+                "id": 2,
+                "title": "Backend System for Busher COCDRIL'S Franchise",
+                "date": "June 2024 – July 2024",
+                "stack": [
+                    "Node.js",
+                    "Express",
+                    "MongoDB",
+                    "JWT",
+                    "bcrypt",
+                    "PDFMake"
+                ],
+                "shortDescription": "Development of a <strong>backend system</strong> using <strong>Node.js</strong>, <strong>Express</strong> and <strong>MongoDB</strong> to manage <strong>employees, menus, branches and orders</strong>, including <strong>JWT</strong> authentication and <strong>daily PDF reports</strong>.",
+                "fullDescription": "I implemented a <strong>complete backend</strong> for the Busher COCDRIL'S franchise (June–July 2024) using <strong>Node.js</strong>, <strong>Express</strong> and <strong>MongoDB</strong>. The system managed <strong>employee</strong> data (name, role, address, salary), <strong>menu configuration</strong> (products, ingredients, combos, prices and extras) and <strong>branch</strong> information. The <strong>orders</strong> module allowed waiters to add products by <strong>IDs</strong>, custom notes (e.g., “no mayo”), extra ingredients with unit costs and quantities; the system automatically calculated <strong>subtotal</strong>, <strong>tax (IVA)</strong> and <strong>total</strong>. Finally, I built the <strong>daily closing</strong> feature that generates a <strong>PDF report</strong> containing all orders of the day, service type (takeaway / dine-in), waiter name and a sales summary.",
+                "folder" : "busher",
+                "imgs" : [ "img1", "img2" ],
+                "repositories": {
+                    "frontend": {
+                        "available": "false",
+                        "url": "",
+                        "platform": ""
+                    },
+                    "backend": {
+                        "available": "true",
+                        "url": "https://github.com/AliciaEspinoza/Backend-BusherCocdrilMovil",
+                        "platform": "GitHub"
+                    }
+                }
+            },
+            {
+                "id": 3,
+                "title": "Electric Bike Online Store",
+                "date": "September 2024",
+                "stack": [
+                    "WordPress",
+                    "Elementor",
+                    "PHP (basic)",
+                    "CSS"
+                ],
+                "shortDescription": "Development of an <strong>online store</strong> using <strong>WordPress</strong>, focused on <strong>UX/UI</strong>, visual customization, <strong>responsive optimization</strong>, and component adjustments for a modern user experience.",
+                "fullDescription": "I built a <strong>complete electric bike store</strong> using <strong>WordPress</strong> (September 2024). I handled the <strong>UI customization</strong>, including color palette, typography, and visual components to match the brand identity. I enhanced the site's <strong>UX/UI</strong> for smoother navigation and optimized it for a <strong>fully responsive design</strong> across different screen sizes. I also customized native WordPress components to deliver a more professional and cohesive experience.",
+                "repositories": {
+                    "frontend": {
+                        "available": "false",
+                        "url": "",
+                        "platform": ""
+                    },
+                    "backend": {
+                        "available": "false",
+                        "url": "",
+                        "platform": ""
+                    }
+                }
+            },
+            {
+                "id": 4,
+                "title": "DREFITNESS Online Store",
+                "date": "September – October 2024",
+                "stack": [
+                    "WordPress",
+                    "Elementor",
+                    "PHP (basic)",
+                    "CSS"
+                ],
+                "shortDescription": "Development of an <strong>online store</strong> for gym equipment using <strong>WordPress</strong>, focused on <strong>UX/UI</strong>, accessibility, visual design, and <strong>responsive layout</strong>.",
+                "fullDescription": "I developed a <strong>full online store for gym equipment</strong> using <strong>WordPress</strong> (September–October 2024). I focused on delivering a refined <strong>user experience</strong>, strong <strong>accessibility</strong>, a clean and functional <strong>layout</strong>, and customized buttons, colors, and typography. I also implemented a <strong>fully responsive design</strong> and added <strong>custom CSS</strong> to fine-tune components and improve the overall visual consistency of the site.",
+                "repositories": {
+                    "frontend": {
+                        "available": "false",
+                        "url": "",
+                        "platform": ""
+                    },
+                    "backend": {
+                        "available": "false",
+                        "url": "",
+                        "platform": ""
+                    }
+                }
+            },
+            {
+                "id": 5,
+                "title": "Graduate Thesis Tracking System — Instituto Tecnológico de Cuautla",
+                "date": "October 2024 – February 2025",
+                "stack": [
+                    "Angular",
+                    "Node.js",
+                    "Express",
+                    "MongoDB"
+                ],
+                "shortDescription": "Development of a full <strong>academic management system</strong> for monitoring <strong>graduate thesis progress</strong>, handling periods, assignments, advising, grading, and administrative control.",
+                "fullDescription": "I developed a <strong>comprehensive thesis management system</strong> for graduate students at the Instituto Tecnológico de Cuautla (October 2024 – February 2025). The platform allowed the <strong>coordinator</strong> to register faculty accounts, manage <strong>academic periods</strong>, and create student accounts through <strong>CSV bulk import</strong>. Professors could <strong>assign tasks</strong> (such as reviewing thesis chapters), set deadlines, and <strong>link their advisees</strong> so assignments were sent automatically.\n\nGraduate students had a dedicated module where they could view their <strong>assignments</strong>, submit work via Drive links, access feedback, and review <strong>graded</strong> or returned tasks. The system also managed all core <strong>thesis information</strong>, including title, status, and the requirement to upload their <strong>published academic article</strong>.\n\nEach user type —coordinator, professor, and student— had a personalized dashboard: the coordinator accessed global system stats; professors saw only their advisees; and students managed all information related to their thesis. All users had a full <strong>profile module</strong> where they could edit personal data and update their password.\n\nOnce a thesis was approved by the professor, the coordinator used an administrative panel to validate the work or return it for revision. The system included <strong>JWT authentication</strong>, <strong>Bcrypt encryption</strong>, a backend developed with <strong>Node.js, Express, and MongoDB</strong>, and a professional interface built with <strong>Angular</strong>.",
+                "folder" : "itc",
+                "imgs" : [ "img1", "img2", "img3" ],
+                "repositories": {
+                    "frontend": {
+                        "available": "true",
+                        "url": "https://github.com/jnthnexpdev/posgrado_frontend",
+                        "platform": "GitHub"
+                    },
+                    "backend": {
+                        "available": "true",
+                        "url": "https://github.com/jnthnexpdev/posgrado_backend",
+                        "platform": "GitHub"
+                    }
+                }
+            }
+        ],
+        "btn-view" : "View more"
+    },
+    "skills" : {
+        "title" : "Skills",
+        
+        "frontend" : {   
+            "angular" : {
+                "name" : "Angular",
+                "experience" : "2 years exp",
+                "version": "v16 - v20"
+            },
+            "css" : {
+                "name" : "CSS",
+                "experience" : "2 years exp",
+                "version": "3"
+            },
+            "html" : {
+                "name" : "HTML",
+                "experience" : "2 years exp",
+                "version": "5"
+            },
+            "tailwind" : {
+                "name" : "TailwindCSS",
+                "experience" : "6 months exp",
+                "version": "v4"
+            },
+            "typescript" : {
+                "name" : "Typescript",
+                "experience" : "2 years exp",
+                "version": ""
+            }
+        },
+        "backend" : {   
+            "nodejs" : {
+                "name" : "NodeJS",
+                "experience" : "2 years exp"
+            },
+            "express" : {
+                "name" : "Express",
+                "experience" : "2 years exp"
+            },
+            "mongodb" : {
+                "name" : "MongoDB",
+                "experience" : "2 years exp"
+            },
+            "postgresql" : {
+                "name" : "PostgreSQL",
+                "experience" : "6 months exp"
+            }
+        }
+    },
+    "about" : {
+        "title" : "About me",
+        "short": "I'm a <strong>Frontend Developer with a Fullstack profile</strong>, specialized in modern user interfaces and complete web systems. I work with <strong>Angular, TailwindCSS, Node.js, Express, and MongoDB</strong>, handling both UI and backend logic. I have experience with <strong>authentication, REST APIs, data encryption, and access control</strong>. I am looking for a team where I can <strong>grow professionally and add real value</strong>.",
+    
+        "long": "I'm a <strong>Frontend Developer with a Fullstack profile</strong>, focused on building modern, accessible, and optimized interfaces. I have participated in <strong>academic, commercial, and institutional projects</strong> using <strong>Angular, TailwindCSS, TypeScript, Node.js, Express, and MongoDB</strong>, developing both frontend and complete APIs. <br><br> I am currently looking to join a team where I can <strong>continue growing and contribute real value</strong>."
+    },
+    "contact" : {
+        "title" : "Contact me",
+        "description": "I’m open to new opportunities and collaborations. Leave me a message and I’ll respond as soon as possible.",
+        "form" : {
+            "name" : "Name: ",
+            "namePlaceholder" : "Write your full name",
+            "email" : "Email address:",
+            "emailPlaceholder" : "Write your email address",
+            "message": "Message:",
+            "messagePlaceholder": "Tell me about your project or idea",
+            "submit": "Send message",
+            "success": "Your message has been sent successfully!",
+            "error": "Something went wrong. Please try again."
+        },
+        "privacy": "Your information will never be shared.",
+        "whatsapp": "Contact me on WhatsApp",
+        "emailAlt": "Or send me an email"
+    }
+}

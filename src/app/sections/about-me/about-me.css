@@ -1,0 +1,9 @@
+@keyframes float {
+  0% { filter: drop-shadow(0 0 12px #2541b2ff); }
+  50% { filter: drop-shadow(0 0 12px #1768acff); }
+  100% { filter: drop-shadow(0 0 12px #2541b2ff); }
+}
+
+.animate-float {
+  animation: float 3s linear infinite;
+}

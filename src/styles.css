@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root, .dark{
+    --black: #050505;
+    --gray: #1d1d1d;
+    --red: #d7263dff;
+    --blue: #3772ffff;
+    --yellow: #fdca40ff;
+
+    --blue: #03256cff;
+    --persian: #2541b2ff;
+    --ocean: #1768acff;
+    --sky: #06bee1ff;
+
+    --instagram: #e1306c;
+    --linkedin: #0e76a8;
+    --github: #24292E;
+    --gitlab: #fc6d27;
+    --whatsapp: #25D366;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease-out;
+}
+
+.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+body { 
+    margin: 0; 
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    background-color: white; 
+    min-height: 100dvh;
+}
+
+@layer utilities {
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.1s ease-out forwards;
+  }
+}
+
+@layer utilities {
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 0px rgba(255,255,255,0); }
+    50% { box-shadow: 0 0 20px rgba(255,255,255,0.25); }
+  }
+
+  .animate-glow {
+    animation: glow 3s ease-in-out infinite;
+  }
+}

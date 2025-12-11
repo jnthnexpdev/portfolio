@@ -1,0 +1,26 @@
+<app-header (menuToggle)="handleMenuToggle($event)"></app-header>
+
+@if(isMenuOpen()){
+    <app-sidebar (menuToggle)="handleMenuToggle($event)"></app-sidebar>
+}
+
+<main class="w-full min-h-dvh">
+    <section id="hero" AnimateOnScrollDirective>
+        <app-hero></app-hero>
+    </section>
+    <section id="projects" AnimateOnScrollDirective>
+        <app-projects></app-projects>
+    </section>
+    <section id="skills" AnimateOnScrollDirective>
+        <app-skills></app-skills>
+    </section>
+    <section id="about" AnimateOnScrollDirective>
+        <app-about-me></app-about-me>
+    </section>
+    <section id="contact" AnimateOnScrollDirective>
+        <app-contact></app-contact>
+    </section>
+</main>
+
+
+<app-footer></app-footer>

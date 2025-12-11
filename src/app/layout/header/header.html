@@ -1,0 +1,103 @@
+<div class="menu h-20 top-0 fixed z-10 w-full bg-white flex justify-between items-center shadow-lg">
+    <div class="logo p-4 flex items-center justify-center">
+        <h1 class="font-bold fs-h2 bg-linear-to-r from-(--ocean) via-(--blue) to-(--ocean) bg-clip-text text-transparent leading-normal"> Jnthnexpdev </h1>
+    </div>
+
+    <ul class="hidden  items-center justify-between relative mr-4 lg:flex">
+        <li (click)="scrollTo('hero')" class="flex items-center p-4 text-(--black) stroke-(--black) hover:stroke-(--blue) hover:cursor-pointer hover:text-(--blue)">
+            <svg class="w-5 h-5 mr-2 fill-none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 10.25V20a1 1 0 0 0 1 1h4.429a1 1 0 0 0 1-1v-6.714h5.142V20a1 1 0 0 0 1 1H20a1 1 0 0 0 1-1v-9.75a1 1 0 0 0-.4-.8L12 3 3.4 9.45a1 1 0 0 0-.4.8Z"></path>
+            </svg>
+            <a class="font-normal font-base"> {{ 'header.home' | translate}} </a>
+        </li>
+        <li (click)="scrollTo('projects')" class="flex items-center p-4 text-(--black) stroke-(--black) hover:stroke-(--blue) hover:cursor-pointer hover:text-(--blue)">
+            <svg class="w-5 h-5 mr-2 fill-none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 21h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-9L9.297 3.445A1 1 0 0 0 8.465 3H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Z"></path>
+            </svg>
+            <a class="font-normal font-base"> {{ 'header.projects' | translate}} </a>
+        </li>
+        <li (click)="scrollTo('skills')" class="flex items-center p-4 text-(--black) stroke-(--black) hover:stroke-(--blue) hover:cursor-pointer hover:text-(--blue)">
+            <svg class="w-5 h-5 mr-2 fill-none " stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 3v18"></path>
+                <path d="M21 21H3"></path>
+                <path d="m7 16 5.25-5.25 3.5 3.5L21 9"></path>
+            </svg>
+            <a class="font-normal font-base"> {{ 'header.skills' | translate}} </a>
+        </li>
+        <li (click)="scrollTo('about')" class="flex items-center p-4 text-(--black) stroke-(--black) hover:stroke-(--blue) hover:cursor-pointer hover:text-(--blue)">
+            <svg class="w-5 h-5 mr-2 fill-none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3a4 4 0 1 0 0 8 4 4 0 1 0 0-8z"></path>
+                <path d="M4 21v-4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"></path>
+            </svg>
+            <a class="font-normal font-base"> {{ 'header.about' | translate}} </a>
+        </li>
+        <li (click)="scrollTo('contact')" class="flex items-center p-4 text-(--black) stroke-(--black) hover:stroke-(--blue) hover:cursor-pointer hover:text-(--blue)">
+            <svg class="w-5 h-5 mr-2 fill-none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="m3.51 2 3.64.132A1.961 1.961 0 0 1 8.89 3.37l1.077 2.662c.25.62.183 1.326-.18 1.884l-1.379 2.121c.817 1.173 3.037 3.919 5.388 5.526l1.752-1.079a1.917 1.917 0 0 1 1.483-.226l3.485.894c.927.237 1.551 1.126 1.478 2.103l-.224 2.983c-.078 1.047-.935 1.869-1.952 1.75C6.392 20.429-1.481 2 3.511 2Z"></path>
+            </svg>
+            <a class="font-normal font-base"> {{ 'header.contact' | translate}} </a>
+        </li>
+
+        <div class="language relative w-auto">
+            <div (click)="toggleSelectLanguage()" class="p-4 flex justify-between items-center w-full hover:cursor-pointer">
+                <div class="flex items-center mr-2">
+                    <img [src]="languageSelected().flag" class="w-5 h-5 mr-2">
+
+                    <p class="fs-sm font-normal">
+                        {{ languageSelected().code }}
+                    </p>
+                </div>
+
+                <svg
+                class="w-5 h-5 fill-none stroke-(--black)"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                >
+                <path d="m4 8 8 8 8-8"></path>
+                </svg>
+            </div>
+
+            @if (openLanguageSelect()) {
+                <ul class="absolute top-full left-0 w-full bg-white shadow-lg rounded-md z-50">
+
+                <li
+                    class="flex p-4 hover:cursor-pointer bg-gray-100"
+                    (click)="selectLanguage(0)"
+                >
+                    <img [src]="languages[0].flag" class="w-5 h-5 mr-2">
+                    <a class="fs-sm">en</a>
+                </li>
+
+                <li
+                    class="flex p-4 hover:cursor-pointer"
+                    (click)="selectLanguage(1)"
+                >
+                    <img [src]="languages[1].flag" class="w-5 h-5 mr-2">
+                    <a class="fs-sm">es</a>
+                </li>
+
+                </ul>
+            }
+        </div>
+
+        <button (click)="downloadCV()" class="flex items-center p-2 rounded-md bg-(--blue) hover:cursor-pointer hover:scale-101"> 
+            <svg class="w-5 h-5 mr-2 stroke-white fill-none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 14v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6"></path>
+                <path d="M12 3v14m0 0-5-5.444M12 17l5-5.444"></path>
+            </svg>
+            <label class="fs-sm text-white hover:cursor-pointer"> {{ 'header.cv' | translate}} </label> 
+        </button>
+    </ul>
+
+    <div class="sidebar mx-4 lg:hidden" (click)="openMenu()" >
+        <button class="flex items-center hover:cursor-pointer">
+            <svg class="w-6 h-6 fill-none stroke-black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7h14"></path>
+                <path d="M5 12h14"></path>
+                <path d="M5 17h14"></path>
+            </svg>
+        </button>
+    </div>
+</div>

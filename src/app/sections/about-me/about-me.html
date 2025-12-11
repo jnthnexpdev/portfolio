@@ -1,0 +1,35 @@
+<section class="about reveal bg-gray-50 w-full flex items-center justify-start flex-col py-10 px-5">
+    <h3 class="bg-linear-to-r from-(--sky) via-(--persian) to-(--sky) bg-clip-text text-transparent fs-h1 font-semibold mb-10 w-full text-center leading-8"> {{ 'about.title' | translate }} </h3>
+
+    <div class="content w-full flex justify-center items-center flex-col md:flex-row">
+
+        <div class="mb-6 p-4 w-full flex justify-center sm:w-[500px] lg:w-1/2 xl:w-2/5">
+            <img class="w-5xl drop-shadow-2xl" src="/pictures/profile2.webp">
+        </div>
+
+        <div class="description p-4 w-full flex justify-center flex-col sm:w-[500px] lg:w-1/2 xl:w-2/5">
+            <p class="fs-base leading-6 mb-4" [innerHTML]="'about.long' | translate"></p>
+
+            <div (click)="scrollTo('contact')" class="buttons w-full flex flex-col lg:flex-row">
+                <button class="primary flex items-center justify-center py-3 px-5 rounded-xl mb-4 bg-(--blue) text-white hover:cursor-pointer hover:scale-101 ease-in-out lg:my-0">
+                    <svg class="w-5 h-5 mr-2 fill-none stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 7h8"></path>
+                        <path d="M7 11h4"></path>
+                        <path d="M19 3H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3l3.646 3.646a.5.5 0 0 0 .708 0L16 17h3a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"></path>
+                    </svg>
+                    <p class="font-normal fs-base"> {{ 'about.buttons.cta' | translate}} </p>
+                </button>
+
+                <button onclick="window.open('https://github.com/jnthnexpdev', '_blank')" class="primary w-full flex items-center justify-center py-3 px-5 rounded-xl mb-4 bg-(--github) text-white hover:cursor-pointer hover:scale-101 ease-in-out md:w-auto md:my-0 lg:mx-2">
+                    <svg class="w-5 h-5 mr-2 fill-none stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21h6Z"></path>
+                        <path d="M9 19c-4.3 1.4-4.3-2.5-6-3"></path>
+                    </svg>
+                    <p class="font-normal fs-base"> {{ 'about.buttons.github' | translate}} </p>
+                </button>
+
+            </div>
+        </div>
+    </div>
+    
+</section>

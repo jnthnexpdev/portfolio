@@ -1,0 +1,102 @@
+<section class="projects reveal bg-gray-50 w-full flex items-center justify-start flex-col py-10 px-5">
+    <h3 class="bg-linear-to-r from-(--sky) via-(--persian) to-(--sky) bg-clip-text text-transparent fs-h1 font-semibold mb-10 w-full text-center leading-8"> {{ 'projects.title' | translate }} </h3>
+
+    <div class="cards-project w-full flex items-center flex-col sm:w-[600px] md:w-[700px] lg:w-4/5 lg:max-w-[1000px]">
+        
+       @for (project of visibleProjects; track $index; let i = $index){
+            <div class="card relative w-full flex items-start justify-start flex-col pl-6 pr-4" [ngClass]="i == 3 ? 'pb-0' : 'pb-8'">
+                
+                <div class="border top-0 h-full absolute left-0 opacity-80 mt-1 ">
+                    <span class="p-2 rounded-full absolute bg-(--blue) -top-0.5 -left-2">  </span>
+                </div>
+
+                <span class="fs-sm font-semibold text-(--github) opacity-75 mb-2"> {{ project.date }} </span>
+
+                <h4 class="font-semibold fs-h2 mb-4 leading-6"> {{ project.title }} </h4>
+
+                <div class="stack lg:mb-4">
+                    @for(technology of project.stack; track $index){
+                        <span class="fs-xs inline-block rounded-full text-(--blue) border border-(--blue) px-2 py-1 opacity-70 font-medium mr-4 even:mb-2 lg:even:my-0"> 
+                            {{ technology }} 
+                        </span>
+                    }
+                </div>
+
+                <div class="carrousel relative flex items-center w-auto mb-4" [ngClass]="visibleProjects[i]?.imgs?.length > 0 ? '' : 'hidden'">
+                    <button (click)="prevImage(i)" [disabled]="currentImageIndex[i] === 0" class=" rounded-full p-2 hover:bg-black/10 absolute bg-transparent hover:cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed">
+                        <svg class="w-8 h-8 fill-none stroke-(--black)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m16 4-8 8 8 8"></path>
+                        </svg>
+                    </button>
+
+                    @for (gallery of visibleProjects[i].imgs; track $index; let j = $index){
+                        <img 
+                        class="w-full h-full lg:w-5xl lg:h-[576px] object-fill"
+                        [src]="'projects' + '/' + project.folder + '/' + gallery + '.png'" 
+                        [ngClass]="currentImageIndex[i] === j ? '' : 'hidden'"
+                        alt="" srcset="">
+                    }
+                    
+                    <button (click)="nextImage(i)" [disabled]="currentImageIndex[i] === visibleProjects[i]?.imgs?.length - 1" class=" rounded-full p-2 hover:bg-black/10 absolute right-0 bg-transparent hover:cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed">
+                        <svg class="w-8 h-8 fill-none stroke-(--black)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m8 4 8 8-8 8"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <p class="fs-base mb-4 text-start leading-6" [innerHTML]="project.shortDescription" ></p>
+
+                
+                @if(project?.repositories?.frontend?.available === 'true' || project?.repositories?.backend?.available === 'true'){
+                    <div class="buttons flex items-center w-full flex-col sm:flex-row">
+
+                        @if(project?.repositories?.frontend?.available === 'true'){
+                            <a href={{project?.repositories?.frontend?.url}} target="_blank" class="w-full flex items-center justify-center fs-sm text-white px-4 py-2 mb-2 rounded-lg hover:cursor-pointer hover:scale-101 sm:w-auto sm:mb-0 sm:ml-2 lg:w-auto" [ngClass]="project?.repositories?.frontend?.platform === 'GitLab' ? 'bg-(--gitlab)' : 'bg-(--github)'">
+                                @if(project?.repositories?.backend?.platform === 'GitLab'){
+                                    <svg class="w-5 h-5 fill-none stroke-white mr-2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m21 14-9 7-9-7L6 3l3 7h6l3-7 3 11Z"></path>
+                                    </svg>
+                                }@else if(project?.repositories?.backend?.platform === 'GitHub'){
+                                    <svg class="w-5 h-5 fill-none stroke-white mr-2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21h6Z"></path>
+                                        <path d="M9 19c-4.3 1.4-4.3-2.5-6-3"></path>
+                                    </svg>
+                                }
+                                Frontend
+                            </a>
+                        }
+
+                        <a href={{project?.repositories?.backend?.url}} target="_blank" class="w-full flex items-center justify-center fs-sm text-white px-4 py-2 rounded-lg hover:cursor-pointer hover:scale-101 sm:ml-2 sm:w-auto" [ngClass]="project?.repositories?.backend?.platform === 'GitLab' ? 'bg-(--gitlab)' : 'bg-(--github)'">
+                            @if(project?.repositories?.backend?.platform === 'GitLab'){
+                                <svg class="w-5 h-5 fill-none stroke-white mr-2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m21 14-9 7-9-7L6 3l3 7h6l3-7 3 11Z"></path>
+                                </svg>
+                            }@else if(project?.repositories?.backend?.platform === 'GitHub'){
+                                <svg class="w-5 h-5 fill-none stroke-white mr-2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21h6Z"></path>
+                                    <path d="M9 19c-4.3 1.4-4.3-2.5-6-3"></path>
+                                </svg>
+                            }
+                            Backend
+                        </a>
+                    </div>
+                }
+            </div>
+       }
+
+       <div class="pagination flex w-full justify-center mt-4">
+            <button (click)="prevPage()" [disabled]="currentPage === 0" class="bg-(--blue) p-2 rounded-md mx-2 hover:cursor-pointer disabled:bg-gray-300 disabled:cursor-not-allowed">
+                <svg class="w-4 h-4 fill-none stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m16 4-8 8 8 8"></path>
+                </svg>
+            </button>
+
+            <button (click)="nextPage()" [disabled]="currentPage === 1" class="bg-(--blue) p-2 rounded-md mx-2 hover:cursor-pointer disabled:bg-gray-300 disabled:cursor-not-allowed">
+                <svg class="w-4 h-4 fill-none stroke-white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m8 4 8 8-8 8"></path>
+                </svg>
+            </button>
+       </div>
+    
+    </div>
+</section>

@@ -1,0 +1,265 @@
+{
+    "header" : {
+        "home" : "Inicio",
+        "projects" : "Proyectos",
+        "skills" : "Skills",
+        "about" : "Sobre mi",
+        "contact" : "Contacto",
+        "preferences" : "Preferencias",
+        "cv" : "CV",
+        "download" : "Descargar CV"
+    },
+    "hero" : {
+        "title" : "Hola, soy",
+        "name" : "Jonathan Espinosa Garcia",
+        "job" : "Desarrollador Frontend y Backend",
+        "description": "Estudie Ingenieria en Sistemas Computacionales con <strong>1 año de experiencia</strong> en el desarrollo de sistemas web. Trabajo con tecnologías como <strong>Angular, Node.js, Express, MongoDB y PostgreSQL</strong>, además de tener experiencia con <strong>WordPress</strong>. Me especializo en crear sistemas completos, cuidando tanto el frontend como el backend, con un enfoque en <strong>UX/UI</strong>, <strong>responsive design</strong> y <strong>buenas prácticas</strong> de desarrollo.",
+        "buttons" : {
+            "download" : "Descargar CV",
+            "cta" : "Ver proyectos"
+        }
+    },
+    "footer" : {
+        "job" : "Desarrollador Web Full Stack",
+        "links" : {
+            "title" : "Enlaces",
+            "home" : "Inicio",
+            "projects" : "Proyectos",
+            "skills" : "Skills",
+            "about" : "Sobre mi",
+            "contact" : "Contacto"
+        },
+        "files" : {
+            "title" : "Archivos",
+            "download" :"Descargar CV"
+        },
+        "contact" : {
+            "title" : "Contacto",
+            "email" : "jnthnexpdev@gmail.com",
+            "phone" : "7352236351",
+            "location" : "Morelos"
+        },
+        "copyright" : "Todos los derechos reservados."
+    },
+    "projects": {
+        "title" : "Experiencia profesional",
+        "projectList" : [
+            {
+                "id": 1,
+                "title": "Sistema Gestor del Parque Vehicular de la CFE",
+                "date": "Octubre 2023 – Enero 2024",
+                "stack": [
+                    "Angular",
+                    "Node.js",
+                    "Express",
+                    "MongoDB",
+                    "JWT",
+                    "API",
+                    "CSV",
+                    "CSS"
+                ],
+                "shortDescription": "Desarrollo de un sistema integral para gestionar el <strong>parque vehicular</strong> de la Comisión Federal de Electricidad, permitiendo visualizar <strong>estatus de vehículos</strong>, registrar <strong>fallas</strong>, coordinar reparaciones con talleres mecánicos y llevar un <strong>historial documental</strong> completo.",
+                "fullDescription": "Desarrollé un <strong>sistema gestor del parque vehicular</strong> para la Comisión Federal de Electricidad (CFE) con el objetivo de administrar toda la información de los vehículos de cada área. Los jefes podían visualizar tablas con el <strong>estatus de cada vehículo</strong> (en funcionamiento, en taller o descompuesto), así como datos relevantes como <strong>placas, modelo, año, tipo de vehículo</strong> y el responsable asignado. Cuando un vehículo presentaba una falla, los coordinadores publicaban reportes con <strong>descripción y fotografías</strong>, los cuales eran atendidos por talleres mecánicos que proponían posibles diagnósticos, estimaciones de tiempo y un <strong>presupuesto preliminar</strong>. Una vez acordada la reparación, el vehículo se asignaba al taller y estos gestionaban un <strong>timeline documentado</strong> con imágenes y avances de cada etapa. El sistema permitía generar <strong>recibos de entrega</strong> cuando el vehículo era reparado y aprobado por la CFE. Toda la información se integraba mediante <strong>archivos CSV</strong> y se almacenaba de forma organizada en carpetas para mantener el <strong>historial completo de cada reparación</strong>.",
+                "folder" : "cfe",
+                "imgs" : [ "img1", "img2", "img3", "img4", "img5", "img6" ],
+                "repositories": {
+                    "frontend": {
+                        "available": "true",
+                        "url": "https://gitlab.com/jnthnexpdev/cfe_frontend",
+                        "platform": "GitLab"
+                    },
+                    "backend": {
+                        "available": "true",
+                        "url": "https://gitlab.com/jnthnexpdev/cfe_backend",
+                        "platform": "GitLab"
+                    }
+                }
+            },
+            {
+                "id": 2,
+                "title": "Sistema Backend para franquicia Busher COCDRIL'S",
+                "date": "Junio 2024 – Julio 2024",
+                "stack": [
+                    "Node.js",
+                    "Express",
+                    "MongoDB",
+                    "JWT",
+                    "bcrypt",
+                    "PDFMake"
+                ],
+                "shortDescription": "Desarrollo de un <strong>sistema backend</strong> con <strong>Node.js</strong>, <strong>Express</strong> y <strong>MongoDB</strong> para gestionar <strong>empleados, menús, sucursales y pedidos</strong>, incluyendo autenticación con <strong>JWT</strong> y generación de <strong>reportes diarios en PDF</strong>.",
+                "fullDescription": "Implementé un <strong>backend completo</strong> para la franquicia Busher COCDRIL'S (junio–julio 2024) usando <strong>Node.js</strong>, <strong>Express</strong> y <strong>MongoDB</strong>. El sistema gestionaba información de <strong>empleados</strong> (nombre, puesto, dirección, sueldo), la <strong>configuración del menú</strong> (productos, ingredientes, combos, precios y extras) y los datos de cada <strong>sucursal</strong>. El módulo de <strong>pedidos</strong> permitía que el mesero agregara productos con <strong>IDs</strong>, notas personalizadas (ej. “sin mayonesa”), ingredientes extra con su costo unitario y cantidades; el sistema calculaba automáticamente <strong>subtotal</strong>, <strong>IVA</strong> y <strong>total</strong>. Finalmente, desarrollé la funcionalidad de <strong>corte diario</strong> que genera un <strong>reporte en PDF</strong> con todas las comandas del día, tipo de servicio (para llevar / en restaurante), nombre del mesero y resumen de ventas.",
+                "folder" : "busher",
+                "imgs" : [ "img1", "img2" ],
+                "repositories": {
+                    "frontend": {
+                        "available": "false",
+                        "url": "",
+                        "platform": ""
+                    },
+                    "backend": {
+                        "available": "true",
+                        "url": "https://github.com/AliciaEspinoza/Backend-BusherCocdrilMovil",
+                        "platform": "GitHub"
+                    }
+                }
+            },
+            {
+                "id": 3,
+                "title": "Tienda en línea de bicicletas eléctricas ElecBike",
+                "date": "Septiembre 2024",
+                "stack": [
+                    "WordPress",
+                    "Elementor",
+                    "PHP (básico)",
+                    "CSS"
+                ],
+                "shortDescription": "Desarrollo de una <strong>tienda en línea</strong> con <strong>WordPress</strong>, enfocada en <strong>UX/UI</strong>, personalización visual, <strong>optimización responsive</strong> y ajustes de componentes para una experiencia moderna.",
+                "fullDescription": "Creé una <strong>tienda completa de bicicletas eléctricas</strong> utilizando <strong>WordPress</strong> (septiembre 2024). Me encargué de la <strong>personalización de la interfaz</strong>, ajustando colores, tipografías y componentes visuales para alinearlos con la identidad de marca. Implementé mejoras de <strong>UX/UI</strong> para facilitar la navegación y optimicé el sitio con un diseño <strong>totalmente responsive</strong> en distintos tamaños de pantalla. También adapté componentes nativos de WordPress para lograr una experiencia más profesional y coherente.",
+                "repositories": {
+                    "frontend": {
+                        "available": "false",
+                        "url": "",
+                        "platform": ""
+                    },
+                    "backend": {
+                        "available": "false",
+                        "url": "",
+                        "platform": ""
+                    }
+                }
+            },
+            {
+                "id": 4,
+                "title": "Tienda online para DREFITNESS",
+                "date": "Septiembre – Octubre 2024",
+                "stack": [
+                    "WordPress",
+                    "Elementor",
+                    "PHP (básico)",
+                    "CSS"
+                ],
+                "shortDescription": "Desarrollo de una <strong>tienda en línea</strong> para máquinas de gimnasio con <strong>WordPress</strong>, enfocada en <strong>UX/UI</strong>, accesibilidad, diseño visual y <strong>responsive design</strong>.",
+                "fullDescription": "Creé una <strong>tienda online para DREFITNESS especializada en máquinas de gimnasio</strong> utilizando <strong>WordPress</strong> (septiembre–octubre 2024). Trabajé a detalle la <strong>experiencia de usuario</strong>, la <strong>accesibilidad</strong>, la estructura visual del <strong>layout</strong> y la personalización de botones, colores y tipografías. Además, implementé un diseño <strong>totalmente responsive</strong> y apliqué <strong>CSS personalizado</strong> para ajustar componentes y mejorar la consistencia visual del sitio.",
+                "repositories": {
+                    "frontend": {
+                        "available": "false",
+                        "url": "",
+                        "platform": ""
+                    },
+                    "backend": {
+                        "available": "false",
+                        "url": "",
+                        "platform": ""
+                    }
+                }
+            },
+            {
+                "id": 5,
+                "title": "Sistema de seguimiento de tesis para posgrado — Instituto Tecnológico de Cuautla",
+                "date": "Octubre 2024 – Febrero 2025",
+                "stack": [
+                    "Angular",
+                    "Node.js",
+                    "Express",
+                    "MongoDB"
+                ],
+                "shortDescription": "Desarrollo de un <strong>sistema académico completo</strong> para gestionar el <strong>seguimiento de tesis de posgrado</strong>, automatizando periodos, asignaciones, asesorías, calificaciones y control administrativo.",
+                "fullDescription": "Construí un <strong>sistema integral de gestión de tesis</strong> para estudiantes de posgrado del Instituto Tecnológico de Cuautla (Octubre 2024 – Febrero 2025). La plataforma permitía al <strong>coordinador</strong> registrar docentes, gestionar <strong>periodos escolares</strong> y crear cuentas de alumnos mediante <strong>importación masiva de CSV</strong>. Los docentes podían <strong>asignar actividades</strong> (como revisiones de capítulos de tesis), definir fechas límite y <strong>vincular alumnos asesorados</strong> para que recibieran esas tareas automáticamente.\n\nLos estudiantes contaban con un módulo dedicado donde podían ver sus <strong>asignaciones</strong>, enviar entregas mediante enlaces de Drive, consultar retroalimentación y revisar actividades <strong>calificadas</strong> o devueltas para corrección. El sistema también gestionaba toda la información de la <strong>tesis formal</strong>, incluyendo título, estatus y la obligación de subir el <strong>artículo académico publicado</strong> como requisito.\n\nCada tipo de usuario —coordinador, docente y alumno— tenía un <strong>panel personalizado</strong>: el coordinador veía estadísticas globales del sistema; los docentes veían solo sus alumnos asesorados; y los estudiantes accedían a toda la información relacionada con su tesis. Además, todos disponían de un módulo de <strong>perfil</strong> para editar datos personales y cambiar su contraseña.\n\nAl finalizar el proceso, el coordinador podía revisar todas las tesis desde un panel administrativo, validar las que estaban <strong>aprobadas</strong> o regresarlas a revisión. El sistema integró autenticación con <strong>JWT</strong>, encriptación con <strong>Bcrypt</strong> y un backend construido con <strong>Node.js, Express y MongoDB</strong>, junto con una interfaz profesional creada en <strong>Angular</strong>.",
+                "folder" : "itc",
+                "imgs" : [ "img1", "img2", "img3" ],
+                "repositories": {
+                    "frontend": {
+                        "available": "true",
+                        "url": "https://github.com/jnthnexpdev/posgrado_frontend",
+                        "platform": "GitHub"
+                    },
+                    "backend": {
+                        "available": "true",
+                        "url": "https://github.com/jnthnexpdev/posgrado_backend",
+                        "platform": "GitHub"
+                    }
+                }
+            }
+        ],
+        "btn-view" : "Ver más"
+    },
+    "skills" : {
+        "title" : "Skills",
+        
+        "frontend" : {   
+            "angular" : {
+                "name" : "Angular",
+                "experience" : "2 años exp",
+                "version": "v16 - v20"
+            },
+            "css" : {
+                "name" : "CSS",
+                "experience" : "2 años exp",
+                "version": "3"
+            },
+            "html" : {
+                "name" : "HTML",
+                "experience" : "2 años exp",
+                "version": "5"
+            },
+            "tailwind" : {
+                "name" : "TailwindCSS",
+                "experience" : "6 meses exp",
+                "version": "v4"
+            },
+            "typescript" : {
+                "name" : "Typescript",
+                "experience" : "2 años exp",
+                "version": ""
+            }
+        },
+        "backend" : {   
+            "nodejs" : {
+                "name" : "NodeJS",
+                "experience" : "2 años exp"
+            },
+            "express" : {
+                "name" : "Express",
+                "experience" : "2 años exp"
+            },
+            "mongodb" : {
+                "name" : "MongoDB",
+                "experience" : "2 años exp"
+            },
+            "postgresql" : {
+                "name" : "PostgreSQL",
+                "experience" : "6 meses exp"
+            }
+        }
+    },
+    "about" : {
+        "title" : "Acerca de mi",
+        "buttons" : {
+            "cta" : "Contáctame",
+            "github" : "GitHub"
+        },
+        "short": "Soy <strong>Frontend Developer con perfil Fullstack</strong>, especializado en interfaces modernas y sistemas web completos. Trabajo con <strong>Angular, TailwindCSS, Node.js, Express y MongoDB</strong>, desarrollando tanto la interfaz como la lógica del servidor. Tengo experiencia en <strong>autenticación, APIs REST, encriptación y control de accesos</strong>. Busco un equipo donde pueda <strong>crecer profesionalmente y aportar valor real</strong>.",
+        "long": "Soy <strong>Frontend Developer con perfil Fullstack</strong>, enfocado en la creación de interfaces modernas, accesibles y optimizadas. He participado en <strong>proyectos académicos, comerciales e institucionales</strong>, utilizando tecnologías como <strong>Angular, TailwindCSS, TypeScript, Node.js, Express y MongoDB</strong>, desarrollando tanto frontend como APIs completas. <br><br> Actualmente busco integrarme a un equipo donde pueda <strong>seguir creciendo y aportar soluciones de alto valor</strong>."
+    },
+    "contact": {
+        "title": "Contáctame",
+        "description": "Estoy abierto a nuevas oportunidades y colaboraciones. Déjame un mensaje y te responderé lo más rápido posible.",
+        "form": {
+            "name": "Nombre:",
+            "namePlaceholder": "Escribe tu nombre completo",
+            "email": "Correo electrónico:",
+            "emailPlaceholder": "Escribe tu correo electrónico",
+            "message": "Mensaje:",
+            "messagePlaceholder": "Cuéntame sobre tu proyecto o idea",
+            "submit": "Enviar mensaje",
+            "success": "¡Tu mensaje ha sido enviado exitosamente!",
+            "error": "Ocurrió un error. Por favor, inténtalo de nuevo."
+        },
+        "privacy": "Tu información no será compartida.",
+        "whatsapp": "Contáctame por WhatsApp",
+        "emailAlt": "O envíame un correo"
+    }
+
+
+}
