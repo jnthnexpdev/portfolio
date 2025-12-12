@@ -47,7 +47,7 @@
             {
                 "id": 1,
                 "title": "Sistema Gestor del Parque Vehicular de la CFE",
-                "date": "Octubre 2023 – Enero 2024",
+                "date": "Octubre 2023 – Febrero 2024",
                 "stack": [
                     "Angular",
                     "Node.js",
@@ -78,7 +78,7 @@
             {
                 "id": 2,
                 "title": "Sistema Backend para franquicia Busher COCDRIL'S",
-                "date": "Junio 2024 – Julio 2024",
+                "date": "Marzo 2024 – Julio 2024",
                 "stack": [
                     "Node.js",
                     "Express",
@@ -107,7 +107,7 @@
             {
                 "id": 3,
                 "title": "Tienda en línea de bicicletas eléctricas ElecBike",
-                "date": "Septiembre 2024",
+                "date": "Agosto 2024 - Septiembre 2024",
                 "stack": [
                     "WordPress",
                     "Elementor",
@@ -132,7 +132,7 @@
             {
                 "id": 4,
                 "title": "Tienda online para DREFITNESS",
-                "date": "Septiembre – Octubre 2024",
+                "date": "Septiembre 2024 – Octubre 2024",
                 "stack": [
                     "WordPress",
                     "Elementor",
@@ -157,7 +157,7 @@
             {
                 "id": 5,
                 "title": "Sistema de seguimiento de tesis para posgrado — Instituto Tecnológico de Cuautla",
-                "date": "Octubre 2024 – Febrero 2025",
+                "date": "Octubre 2024 – Marzo 2025",
                 "stack": [
                     "Angular",
                     "Node.js",
